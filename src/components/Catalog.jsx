@@ -1,6 +1,5 @@
 function Catalog(props) {
   const filmsTab = props.file;
-  console.log(filmsTab);
 
   const result = filmsTab.map((elem) => {
     return (
