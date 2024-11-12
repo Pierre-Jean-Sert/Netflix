@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+/* General */
+
+.container {
+  margin: 0 0 0 50px;
+  padding-bottom: 20px;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+h2 {
+  font-family: "Roboto", serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Header */
+
+header img {
+  height: 100px;
+}
+
+/* Carrousel */
+
+.movies-list {
+  display: flex;
+  overflow: scroll;
+  margin-bottom: 10px;
+}
+
+.movies-list::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.movies-list img {
+  width: 210px;
+  height: 120px;
+  object-fit: cover;
+}
