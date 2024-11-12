@@ -4,38 +4,18 @@ import "./App.css";
 //! Import du fichier movies
 import movies from "./assets/movies_rnexgr.json";
 
-//!Import du Header
+//!Import des composants
 import Header from "./components/Header";
+import Catalog from "./components/Catalog";
 
 //*Fonction APP
 function App() {
   return (
     <>
+      {/* Header */}
       <Header />
-
-      {/* Affichage des movies avec mappage */}
-      {movies.map((elem) => {
-        return (
-          <>
-            <section className="container">
-              {/* Titres des catégories */}
-              <h2>{elem.category}</h2>
-
-              <div className="movies-list">
-                {/* Images des films */}
-                {elem.images.map((elm) => {
-                  console.log(elm);
-                  return (
-                    <div>
-                      <img src={elm} />
-                    </div>
-                  );
-                })}
-              </div>
-            </section>
-          </>
-        );
-      })}
+      {/* Affichage des movies par les composants */}
+      <Catalog file={movies} />
     </>
   );
 }
